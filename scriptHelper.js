@@ -38,31 +38,37 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                 alert("All fields are required!");
     } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number"|| validateInput(cargoLevel) === "Not a Number"){
         alert("Make sure to enter valid information for each field!")
-    };
+    } else {
 
-     let statusCheck = document.getElementById("launchStatus");
-     let box = document.getElementById("faultyItems");
-      
-     console.log("***", statusCheck.value)
-     statusCheck.addEventListener("statusCheck", function(){
-        if (validateInput(statusCheck.value)=== "Not a Number"){
-            box.style.visibility += visible;   
+    }
+
+
+
+     
+    //  console.log("***", statusCheck.value)
+     
+    //     if (validateInput(statusCheck.value)=== "Not a Number"){
+    //         box.style.visibility = visible;   
              
-            statusCheck.style.color = "green";
-        } else {
-            statusCheck.style.color = "red";
-        }
+    //         statusCheck.style.color = "green";
+    //     } else {
+    //         statusCheck.style.color = "red";
+    //     }
 
-     });
-      
+     
+        let statusCheck = document.getElementById("launchStatus");
+        let box = document.getElementById("faultyItems");
         let pilotStatus = document.getElementById("pilotStatus");
         let copilotStatus = document.getElementById("copilotStatus");
         let fuelStatus = document.getElementById("fuelStatus");
         let cargoStatus = document.getElementById("cargoStatus");
+
+        box.style.visibility += 'visible';  
+        pilotStatus.innerHTML = 'text'
         //let fuel = document.querySelector("input[name=fuelLevel]").value;
         console.log("poop", validateInput(fuelLevel))
         if (formSubmission(fuel)  < 10000){
-        box.style.visibility += visible;   
+        
         fuelStatus += "There is not enough fuel for the journey.";
         }
     //  pStatus.innerText = pilot;

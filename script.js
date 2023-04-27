@@ -4,8 +4,10 @@ window.addEventListener("load", function() {
     let forms = document.getElementsByTagName("form")
     forms[0].addEventListener("submit", event =>{
         event.preventDefault()
-    let pilot = document.querySelector("input[name=pilotName]").value;
-    let coPilot = document.querySelector("input[name=copilotName]").value;
+    let pilot = document.querySelector("input[name=pilotName]");
+pilot = pilot.value
+    let coPilot = document.querySelector("input[name=copilotName]");
+    coPilot = coPilot.value
     let fuel = document.querySelector("input[name=fuelLevel]").value;
     let cargoMass = document.querySelector("input[name=cargoMass]").value;
 
